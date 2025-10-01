@@ -1,11 +1,20 @@
 /*
 =============================================================
+إنشاء قاعدة بيانات والمخططات
 Create Database and Schemas
 =============================================================
+:الغرض من البرنامج النصي
+.التحقق مما إذا كانت موجودة بالفعل 'DataWarehouseAnalytics' يقوم هذا النص بإنشاء قاعدة بيانات جديدة باسم 
+gold إذا كانت قاعدة البيانات موجودة، يتم حذفها وإعادة إنشائها. بالإضافة إلى ذلك، يقوم هذا البرنامج النصي بإنشاء مخطط يسمى
 Script Purpose:
     This script creates a new database named 'DataWarehouseAnalytics' after checking if it already exists. 
     If the database exists, it is dropped and recreated. Additionally, this script creates a schema called gold
 	
+:تحذير
+إذا كانت موجودة 'DataWarehouseAnalytics' تشغيل هذا البرنامج النصي سيؤدي إلى حذف قاعدة البيانات بأكملها 
+.سيتم حذف جميع البيانات في قاعدة البيانات بشكل دائم
+يرجى توخي الحذر والتأكد من وجود نسخ احتياطية مناسبة قبل تشغيل هذا البرنامج النصي
+
 WARNING:
     Running this script will drop the entire 'DataWarehouseAnalytics' database if it exists. 
     All data in the database will be permanently deleted. Proceed with caution 
@@ -112,3 +121,4 @@ WITH (
 	TABLOCK
 );
 GO
+
